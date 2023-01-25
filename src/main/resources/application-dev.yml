@@ -1,0 +1,36 @@
+server:
+  port: 8095
+  servlet:
+    context-path: /infovision
+spring:
+  application:
+    name: infovision-canteen-service
+  datasource:
+    url: jdbc:postgresql://samplewebappinazure.postgres.database.azure.com:5432/INFO_EAT?createDatabaseIfNotExist=true
+    username: postgres
+    password: Chirag@1997
+
+
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+
+swagger:
+  url: https://info.eat/infovision
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: https://service-registry.test.restaurantonesolution.com/eureka/
+  instance:
+    hostname: 20.90.96.90
+
+
+
